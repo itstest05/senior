@@ -1,0 +1,170 @@
+/* ============================================================
+   senixr — style.css
+   Minimal hacker-homepage aesthetic · black / monospace
+   ============================================================ */
+
+body {
+    background-color: #000;
+    font-family: monospace;
+    color: #ccc;
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 24px 20px 40px;
+    line-height: 1.7;
+}
+
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #fff;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+a:hover {
+    color: #aaa;
+}
+
+::selection {
+    background-color: #e6e2d6;
+    color: #0f1214;
+}
+
+/* ---------- Typography rhythm ---------- */
+h1 {
+    font-size: 1.35rem;
+    margin: 18px 0 26px;
+}
+
+h2 {
+    font-size: 1.1rem;
+    margin: 34px 0 10px;
+}
+
+h3 {
+    font-size: 1rem;
+    margin: 34px 0 10px;
+}
+
+h4 {
+    font-size: 0.95rem;
+    margin: 22px 0 8px;
+}
+
+p {
+    margin: 10px 0;
+}
+
+ul {
+    margin: 10px 0;
+    padding-left: 26px;
+}
+
+li {
+    margin: 6px 0;
+}
+
+del {
+    text-decoration: line-through;
+    color: #888;
+}
+
+/* ---------- Blinking terminal cursor ---------- */
+.cursor-block {
+    display: inline-block;
+    width: 0.6em;
+    height: 1em;
+    background: #fff;
+    margin-left: 6px;
+    vertical-align: text-bottom;
+    animation: blink 1s steps(2, start) infinite;
+}
+
+@keyframes blink {
+    to {
+        visibility: hidden;
+    }
+}
+
+/* ---------- Round social buttons ---------- */
+.socials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin: 18px 0 22px;
+}
+
+.social-btn {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    border: 1px solid #555;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #ccc;
+    background: transparent;
+    transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.2s;
+    text-decoration: none;
+}
+
+.social-btn:hover {
+    background: #fff;
+    border-color: #fff;
+    color: #000;
+    transform: translateY(-3px);
+}
+
+.social-btn svg {
+    width: 22px;
+    height: 22px;
+    fill: currentColor;
+}
+
+/* ---------- Handles list ---------- */
+.handles {
+    list-style: none;
+    padding-left: 0;
+}
+
+.handles li::before {
+    content: "> ";
+    color: #888;
+}
+
+/* ---------- Footer ---------- */
+footer {
+    margin-top: 46px;
+    padding-top: 14px;
+    border-top: 1px solid #222;
+    color: #888;
+    font-size: 0.82rem;
+}
+
+footer a {
+    color: #ccc;
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 480px) {
+    body {
+        padding: 18px 16px 32px;
+    }
+
+    h1 {
+        font-size: 1.12rem;
+    }
+
+    .social-btn {
+        width: 48px;
+        height: 48px;
+    }
+}
